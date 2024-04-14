@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\DTO;
+namespace App\DTO;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;

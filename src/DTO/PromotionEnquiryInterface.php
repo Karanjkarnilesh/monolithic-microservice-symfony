@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\DTO;
+namespace App\DTO;
 interface PromotionEnquiryInterface extends \JsonSerializable
 {
 

@@ -5,6 +5,7 @@ namespace App\Services\Serializer;
 
 use PhpParser\JsonDecoder;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -12,11 +13,11 @@ use Symfony\Component\Serializer\SerializerInterface;
 class DTOSerializer implements SerializerInterface
 {
 
-    public $serializer;
+    public SerializerInterface $serializer;
     public function __construct()
     {
         $this->serializer=new Serializer (
-[new ObjectNormalizer()],
+[new ObjectNormalizer(nameConverter:new CamelCaseToSnakeCaseNameConverter()  )],
 [new JsonEncoder()]
         );
     }
