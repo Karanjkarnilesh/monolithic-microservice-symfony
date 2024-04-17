@@ -10,7 +10,7 @@ class LowestPriceFilter implements PromotionFilterInterface
         $enquiry->setDiscountedPrice(50);
         $enquiry->setPromotionId(3);
         $enquiry->setPromotionName('Black Friday half price sale');
-    return $enquiry;
+        return $enquiry;
     }
 }
 

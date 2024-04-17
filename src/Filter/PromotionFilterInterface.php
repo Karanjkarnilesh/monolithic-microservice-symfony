@@ -3,9 +3,8 @@ namespace App\Filter;
 
 
 use App\DTO\PromotionEnquiryInterface;
+use App\Filter\LowestPriceFilter;
 interface PromotionFilterInterface 
-//extends LowestPriceFilter
-//
 {
     public function apply(PromotionEnquiryInterface $enquiry): PromotionEnquiryInterface;
     

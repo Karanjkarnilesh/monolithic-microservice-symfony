@@ -2,6 +2,7 @@
 
 namespace App\DTO;
 
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
@@ -10,32 +11,32 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class LowestPriceEnquiry implements PromotionEnquiryInterface
 {
-    private ?int $productId;
+    private ?Product $product;
     private ?int $quantity;
     private ?string $requestLocation;
     private ?string $voucherCode;
-    private ?string $requestData;
+    private ?string $requestDate;
     private ?int $price;
     private ?int $discountedPrice;
     private ?int $promotionId;
     private ?string $promotionName;
 
     /**
-     * @return int|null
+     * @return Product|null
      */
 
-    public function getProductId(): ?int
+    public function getProduct(): ?int
     {
-        return $this->productId;
+        return $this->product;
     }
 
     /**
-     * @return int|null $productId
+     * @return Product|null $product
      */
 
-    public function setProductId(int $productId): ?int
+    public function setProduct(Product $product): Product
     {
-        return $this->productId = $productId;
+        return $this->product = $product;
     }
 
     /**
@@ -100,19 +101,19 @@ class LowestPriceEnquiry implements PromotionEnquiryInterface
      * @return string|null 
      */
 
-    public function getRequestData(): ?string
+    public function getRequestDate(): ?string
     {
-        return $this->requestData;
+        return $this->requestDate;
     }
 
 
     /**
-     * @return string|null $requestData
+     * @return string|null $requestDate
      */
 
-    public function setRequestData(string $requestData): ?string
+    public function setRequestDate(string $requestDate): ?string
     {
-        return $this->requestData = $requestData;
+        return $this->requestDate = $requestDate;
     }
 
 
