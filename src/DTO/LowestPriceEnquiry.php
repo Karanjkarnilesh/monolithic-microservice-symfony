@@ -25,7 +25,7 @@ class LowestPriceEnquiry implements PromotionEnquiryInterface
      * @return Product|null
      */
 
-    public function getProduct(): ?int
+    public function getProduct(): ?Product
     {
         return $this->product;
     }

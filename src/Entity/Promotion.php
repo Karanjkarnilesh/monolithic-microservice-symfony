@@ -31,7 +31,7 @@ class Promotion
      * @var Collection<int, ProductPromotion>
      */
     #[ORM\OneToMany(targetEntity: ProductPromotion::class, mappedBy: 'promotion')]
-    private Collection $productPromotions;
+    private  $productPromotions;
 
     public function __construct()
     {
